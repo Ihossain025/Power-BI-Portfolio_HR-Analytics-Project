@@ -35,24 +35,25 @@ This project demonstrates the end-to-end Power BI workflow, covering data prepar
 - 🔑 Created duplicate dimension table to build proper data model (explained in the model overview Section). Removed duplicates from dimension tables to maintain integrity.
 
 
-![Data Transform at Employee Table](/Power-BI-Portfolio_HR-Analytics-Project/Images/Power Query - Data Cleaning - Employee Table.jpg)
+![Data Transformation – Employee Table](Images/Power_Query_Data_Cleaning_Employee_Table.jpg)
   
 
 🗂️ Data Modeling
 
-- 📅 Built separate Date Tables (Dim_Date) for accurate time-series analysis (Year-over-Year, Month-over-Month).
+- 📅 Built separate Date Tables (Dim_Date) for accurate time-series analysis (Year-over-Year, Qtr-Over-Qtr, Month-over-Month).
 
-- ⭐ Designed a Star-Oriented Fact Constellation Schema with multiple fact tables (Fact_Employee & Fact_Performance Rating) and dimension tables (Dim_Date Table, Dim_Manager_Rating Table, Dim_Self_Rating Table, Dim_Education_Level Table, Dim_Job_Satisfaction Table, Dim_Work-life_Balance Table, Dim_WorkEnvironment Table, Dim_Relationship Table ).
+- ⭐ Designed a Star-Oriented Fact Constellation Schema with multiple fact tables (Fact_Employee & Fact_Performance Rating) and dimension tables (Dim_Date Table, Dim_Manager_Rating Table, Dim_Self_Rating Table, etc. ).
 
-- 🔗 Established 1-to-many and one-way filter propagation relationships for consistent insights.,
+- 🔗 Established 1-to-many and one-way filter propagation relationships for consistent and correct insights.
 
 📊 Data Analysis (DAX)
 
-- ➕ Created calculated columns and measures: Total Sales / Revenue, Total sales for a specific year / Region / category, Total Profit, Profit Margin, Total Orders, Distinct Categories.
+- ➕ Created calculated columns and measures: By applying DAX Formulas and Functions, we have calculated core metrics like Total Employee, Reviewed Employee, Attrition Count, Attrition Rate (Population), Attrition Rate (Sample), Attrition Risk, Overall Employee Satisfaction, Overall Employee Performance, Average Salary, Average Tenure etc.
 
-- 🧮 Applied functions like CALCULATE, SUMX, DIVIDE, DISTINCTCOUNT, COUNTA.
+- 🧮 Applied functions like CALCULATE, AVERAGE, AVERAGEX, DIVIDE, DISTINCTCOUNT, SELECTEDVALUE, SWITCH, MINX, MAXX, UNION, SELECTCOLUMNS, ADDCOLUMNS etc.
+  We have also used variables to store the temporary results of a calculation so that we can reduce the no. of measure. 
 
-- ⏳ Enabled time intelligence with CALENDAR, YEAR, MONTH, DAY.
+- ⏳ Enabled time intelligence with CALENDAR, YEAR, MONTH, DAY, FORMAT etc.
 
 📈 Data Visualization
 
