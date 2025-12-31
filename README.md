@@ -26,7 +26,7 @@ This project demonstrates how business intelligence (BI) tools can be applied to
 
 This project demonstrates the end-to-end Power BI workflow, covering data preparation, modeling, analysis, and dashboarding.
 
-🔄 Data Preparation / ETL Process (Power Query)
+### 🔄 Data Preparation / ETL Process (Power Query) ###
 
 - 📥 Extracted raw HR data from the web and created Fact and Dimension tables.
 
@@ -38,36 +38,41 @@ This project demonstrates the end-to-end Power BI workflow, covering data prepar
 ![Data Transformation – Employee Table](Images/Power_Query_Data_Cleaning_Employee_Table.jpg)
   
 
-🗂️ Data Modeling
+### 🗂️ Data Modeling ###
 
-- 📅 Built separate Date Tables (Dim_Date) for accurate time-series analysis (Year-over-Year, Qtr-Over-Qtr, Month-over-Month).
+- 📅 Built separate Date Tables (Dim_Date) for accurate time-series analysis (Year-over-Year, Qtr-Over-Qtr, Month-over-Month). we
 
 - ⭐ Designed a Star-Oriented Fact Constellation Schema with multiple fact tables (Fact_Employee & Fact_Performance Rating) and dimension tables (Dim_Date Table, Dim_Manager_Rating Table, Dim_Self_Rating Table, etc. ).
 
 - 🔗 Established 1-to-many and one-way filter propagation relationships for consistent and correct insights.
 
-📊 Data Analysis (DAX)
 
-- ➕ Created calculated columns and measures: By applying DAX Formulas and Functions, we have calculated core metrics like Total Employee, Reviewed Employee, Attrition Count, Attrition Rate (Population), Attrition Rate (Sample), Attrition Risk, Overall Employee Satisfaction, Overall Employee Performance, Average Salary, Average Tenure etc.
+### 📊 Data Analysis (DAX) ###
+
+- ➕ Created calculated columns and measures: By applying DAX Formulas and Functions, we have calculated core metrics like Total Employees, Reviewed Employees, Attrition Count, Attrition Rate (Population), Attrition Rate (Sample), Attrition Risk, Overall Employee Satisfaction, Overall Employee Performance, Average Salary, Average Tenure etc.
 
 - 🧮 Applied functions like CALCULATE, AVERAGE, AVERAGEX, DIVIDE, DISTINCTCOUNT, SELECTEDVALUE, SWITCH, MINX, MAXX, UNION, SELECTCOLUMNS, ADDCOLUMNS etc.
   We have also used variables to store the temporary results of a calculation so that we can reduce the no. of measure. 
 
 - ⏳ Enabled time intelligence with CALENDAR, YEAR, MONTH, DAY, FORMAT etc.
 
-📈 Data Visualization
+  ![DAX Measure - Overall Employee Satisfaction](Images/DAX_Measure_Overall_Employee_Satisfaction.jpg)
 
-- 📉 Line Charts → To show Sales & Profit trends (Year-over-Year, Month-over-Month, Quater-over-Quater).
+### 📈 Data Visualization ###
 
-- 🗂️ Cards → To demonstrate Key KPIs (Total No. of Orders, Total Sales, Total Profit, and Profit Margin).
+- 📉 Line Charts → To show Attrition, Performance, and Satisfaction Trends over time (Year-over-Year, Month-over-Month, Quater-over-Quater).
 
-- 📊 Bar/Column/Cluster Column/Stacked Bar Charts → To compare Total Sales / Overall Performance by category, Products, consumer segment, and region.
+- 🗂️ Cards → To demonstrate Key KPIs (Total Employee's, Reviewed Employee's, Attrition Count, Attrition Rate, Overall Employee Satisfaction, Overall Employee Performance etc.).
 
-- 🥧 Pie Chart → To exhibit Shipping mode distribution.
+- 📊 Bar/Column/Cluster Column/Stacked Bar Charts → To compare Attrition, Performance, Satisfaction by Department, Job Role, Gender, Age Group etc.
 
-🎛️ Interactive Dashboard
+- 🥧 Pie Chart → To exhibit part-to-whole composition. For Example, Employee by Gender, Age Group, Ethnicity etc.
 
-- 🎛️ Added slicers, drill-downs, tooltips, and navigation buttons for interactivity.
+  We have also demonstrated other important visuals like Map Chart, Treemap, Matrix, Table etc. However, we try to use common charts most so that different   stakeholders or non-technical people can easily understand the essence. 
+
+### 🎛️ Interactive Dashboard ###
+
+- 🎛️ Added slicers, drill-downs, drill-through, tooltips, and navigation buttons for interactivity.
 
 - 🎨 Delivered a business-friendly, interactive dashboard that supports strategic decision-making.
 
