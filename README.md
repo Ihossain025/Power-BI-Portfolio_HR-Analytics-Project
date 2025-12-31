@@ -83,7 +83,7 @@ This is the model view of our dashboard. As you can see in the model, we have to
 
 ### Sales Insights: ###
 
-![Overall Sales Insights](/Images/Sales%20Insights_Overall.jpg)
+![Dashboard 01: Employee Demographics](Images/Dashboard_01_Employee_Demographics.jpg)
 
 This is the overall sales insights dashboard. It highlights key KPIs like Total orders, Total Sales, Total Profit, and Profit Margin. This also compares year-over-year Total Sales and Profit Growth. The Dashboard shows following insights: 
 
