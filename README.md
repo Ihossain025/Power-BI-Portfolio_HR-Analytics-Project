@@ -34,7 +34,7 @@ This project demonstrates the end-to-end Power BI workflow, covering data prepar
 
 - 🔑 Created duplicate dimension table to build proper data model (explained in the model overview Section). Removed duplicates from dimension tables to maintain integrity.
 
-  ![Overall Sales Insights](/Images/Sales%20Insights_Overall.jpg)
+  
 
 🗂️ Data Modeling
 
