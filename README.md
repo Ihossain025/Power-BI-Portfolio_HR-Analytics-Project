@@ -35,7 +35,7 @@ This project demonstrates the end-to-end Power BI workflow, covering data prepar
 - 🔑 Created duplicate dimension table to build proper data model (explained in the model overview Section). Removed duplicates from dimension tables to maintain integrity.
 
 
-![Data Transform at Employee Table](Power-BI-Portfolio_HR-Analytics-Project/Images/Power Query - Data Cleaning - Employee Table.jpg)
+![Data Transform at Employee Table](/Power-BI-Portfolio_HR-Analytics-Project/Images/Power Query - Data Cleaning - Employee Table.jpg)
   
 
 🗂️ Data Modeling
