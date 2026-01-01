@@ -35,7 +35,7 @@ This project demonstrates the end-to-end Power BI workflow, covering data prepar
 - 🔑 Created duplicate dimension table to build proper data model (explained in the model overview Section). Removed duplicates from dimension tables to maintain integrity.
 
 
-![Data Transformation – Employee Table](Images/Power_Query_Data_Cleaning_Employee_Table.jpg)
+![](Images/Power_Query_Data _Cleaning_Employee_Table.jpg)
   
 
 ### 🗂️ Data Modeling ###
@@ -79,8 +79,8 @@ This project demonstrates the end-to-end Power BI workflow, covering data prepar
 
 ## Data Structure / Model Overview ##
 
+![](Images/Data_Model.jpg)
 
-![Data Model](Images/Data _Model.jpg)
 
 The data model for this HR Analytics project was designed using Power BI best practices, focusing on clarity, correctness, and maintainability. A star-schema–oriented structure was implemented to ensure predictable filter behavior, good performance, and minimal DAX complexity.
 
