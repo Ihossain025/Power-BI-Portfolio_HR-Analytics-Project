@@ -70,7 +70,8 @@ This project demonstrates the end-to-end Power BI workflow, covering data prepar
 
 + 🥧 Pie Chart → To exhibit part-to-whole composition. For Example, Employee by Gender, Age Group, Ethnicity etc.
 
-  We have also demonstrated other important visuals like Map Chart, Treemap, Matrix, Table etc. However, we try to use common charts most so that different   stakeholders or non-technical people can easily understand the essence. 
+     We have also demonstrated other important visuals like Map Chart, Treemap, Matrix, Table etc. However, we try to use common charts most so that
+     different   stakeholders or non-technical people can easily understand the essence. 
 
 
 ### 🎛️ Interactive Dashboard ###
@@ -106,7 +107,7 @@ The model is centered around a FactPerformanceRating table containing employee p
     + Similarly, the Rating Level dimension was duplicated to support Manager Rating and Self Rating
      independently.
 
-This approach avoided reliance on inactive relationships and repeated use of USERELATIONSHIP() or other complex DAX patterns.
+     This approach avoided reliance on inactive relationships and repeated use of USERELATIONSHIP() or other complex DAX patterns.
 
 + Lookup dimensions (Satisfaction Level, Rating Level, Education Level) were used for semantic clarity and clean slicing, rather than forcing complex filtering logic in measures.
 
@@ -144,63 +145,80 @@ The analysis in this project follows a business-driven, assumption-aware approac
 + Visual correlation is sufficient for Business Intelligence use cases. No statistical correlation or predictive modeling was assumed or required for this project.
 
 
-## Dashboard Overview: Executive Summary / Key Insights ##
+## Dashboard Overview: Key Insights ##
 
-### Sales Insights: ###
+### Demographics Insights: ###
 
 ![Dashboard 01: Employee Demographics](Images/Dashboard_01_Employee_Demographics.jpg)
 
-This is the overall sales insights dashboard. It highlights key KPIs like Total orders, Total Sales, Total Profit, and Profit Margin. This also compares year-over-year Total Sales and Profit Growth. The Dashboard shows following insights: 
+This is our demographics insights dashboard. It highlights key KPIs like Total Employee, Active Employee, and Average Tenure. This also show several important visuals like Employee by Department, Job Role, Gender, Age Group etc. The Dashboard shows following insights: 
 
-1. Revenue shows a strong upward trend from 2015 to 2017, after remaining relatively flat between 2014 and 2015. The largest year-over-year growth occurred between 2015 and 2016, indicating a turning point in sales performance and possible improvements in market demand, pricing, or sales strategy.
++ The organization’s workforce is primarily concentrated in Technology, followed by Sales and Human Resources, indicating a strong technical and commercial orientation. At the job-role level, Sales Executives represent the largest employee group, followed by software and data-related roles such as Software Engineers, Data Scientists, and Machine Learning Engineers.
 
-2. Profit increased consistently year over year, with growth rates of 24%, 33%, and 14% respectively. However, despite rising profits, the overall profit margin remains low at 2.89%, suggesting that costs are growing almost proportionally with revenue. This indicates limited pricing power or high operational/discount costs.
++ Gender representation across the organization is relatively balanced, with male and female employees accounting for comparable proportions of the workforce. Additionally, a meaningful share of employees identify as non-binary, while a small percentage chose not to disclose their gender, reflecting a diverse workforce composition.
 
-3. A clear seasonal sales pattern is observed across all years, with Q4 consistently generating the highest revenue, followed by Q3, Q2, and Q1. This suggests strong year-end demand, likely driven by holiday seasons and promotional campaigns, and highlights the importance of inventory and marketing planning ahead of Q4.
++ From an age perspective, the workforce skews young. Nearly two-thirds of employees are under the age of 30, while mid-career professionals (ages 31–40) and senior professionals (ages 41–50) make up a smaller share. This age distribution has important implications for retention, performance, and satisfaction trends observed later in the analysis.
 
-### Product Insights: ###
+### Attrition Insights: ###
 
-![Overall Product Insights](/Images/Product%20Insights_Overall.jpg)
+![Dashboard 02 - Attrition Analysis](Images/Dashboard_02_Attrition_Analysis.jpg)
 
-This is the overall product insights dashboard. It compares product categories and sub-categories as well as shows best and worst performing products in terms of total sales or revenue. The Dashboard shows following Insights: 
+This is our attrition analysis dashboard. It highlights KPIs like Total Employee, Attrition Count, Attrion Rate (P), Attrition Rate (S). Here P means Population and S means Sample. It also shows some important visuals like Attrition over time, Attrition by Department, Job Role, and Employee Satisfaction-Performance Quadrant. We have also deep dive for Attrition - Who is leaving? Why are they leaving?  Does Satisfaction or Performance has influence on Attrition. The following image shows that deep-dive analysis. 
 
-1. "Technology" is the highest revenue-generating product category, significantly outperforming "Furniture" and "Office Supplies". This indicates a strong customer demand for technology             products and suggests that this category is a key driver of overall sales performance.
+![Attrition Analysis - Deep Dive](Images/Attrition_Analysis_Deep _Dive.jpg)
 
-2. At the sub-category level, Chairs generate the highest revenue, followed by Phones, Storage, Tables, and Accessories. This highlights that high-value, durable goods contribute more to           revenue than low-cost consumables, even if their sales volumes may be lower.
+The Dashboard and Deep-Dive Analysis shows following Insights: 
+
++ Attrition is not evenly distributed across departments or roles. Sales exhibits the highest attrition rate, followed by Human Resources and Technology. This departmental pattern is mirrored at the job-role level, where Sales Representatives experience the highest attrition, followed by recruiters and technical roles such as data scientists.
+
++ While Sales has the highest absolute attrition, attrition risk relative to department size is highest in HR, followed by Technology and Sales. This suggests that smaller departments may face proportionally greater retention challenges.
+
++ Attrition trends over time show significant year-to-year volatility, with no consistent upward or downward pattern. This indicates that attrition is likely driven by multiple structural and behavioral factors rather than a single long-term trend.
+
++ Demographically, younger employees (under 30) and employees with shorter tenure (0–1 years and 2–5 years) are significantly more likely to leave the organization, highlighting early-career retention as a key challenge.
+
++ Performance and satisfaction play a critical role in attrition behavior. Employees at both performance extremes—those rated “Above and Beyond” as well as those “Needing Improvement”—exhibit higher attrition. From a satisfaction standpoint, very dissatisfied employees are the most likely to leave.
+
++ When performance and satisfaction are analyzed together, the highest attrition occurs among employees with low satisfaction and low performance, followed by high satisfaction–low performance and low satisfaction–high performance groups. Employees with high satisfaction and high performance show the lowest attrition, reinforcing the combined importance of engagement and effectiveness.
+
++ Additionally, operational factors such as overtime, frequent business travel, and lower salary levels show a strong association with higher attrition, suggesting that workload intensity and compensation competitiveness are key retention drivers.
+
    
-3. The "Cannon imageCLASS 2200 Advanced Copier" is the top-performing product, followed by the "GBC Ibimaster 500 Manual ProClick Binding System" and the "HON 5400 Series Task Chair for Big and    Tall". These products contribute disproportionately to revenue, indicating a reliance on high-ticket items.
+### Performance Insights: ###
 
-   In contrast, "PNY Rapid USB Car Charger – Black", "Grip Seal Envelopes", and "Acco Economy Flexible Poly Round Ring Binder" are among the lowest-performing products, likely due to lower         price points, high competition, or limited differentiation.
-  
-4. A regional and year-specific analysis reveals significant variation in best- and worst-performing categories, sub-categories, and products compared to the overall dataset. This highlights the importance of localized and time-based analysis, as global averages can mask regional demand patterns and lead to sub-optimal business decisions.
+!Dashboard 03 - Employee Performance Insights](Images/Dashboard_03_Performance_Analysis.jpg)
 
-   
-### Consumer Insights: ###
+This is the Employee Performance insights dashboard. It highlights Key KPIs like No. of Reviewed Employees, Avg. Manager-Rating, Avg. Self-Rating, and Overall Performance. It also depicts some key Visuals like Performance Trends, Performance by Gender, Age Group, Department etc. Key Insights are described below: 
 
-![Overall Consumer Insights](/Images/Consumer%20Insights_Overall.jpg)
++ Overall employee performance has fluctuated considerably over the past decade, reflecting periods of both decline and recovery. Performance declined steadily from 2012 to 2016, improved modestly until 2018, declined again in 2019, and then showed sharp volatility between 2020 and 2022.
 
-This is the overall consumer insights dashboard. It demonstrates which consumer segment, region, and states contributing most to our revenue. It also reveals product preferences by segment and geography. Key Insights are described below: 
++ A notable and unexpected finding is that **female employees consistently outperform male employees**, challenging common assumptions and highlighting the importance of inclusive performance evaluation.
 
-1. The dataset consists of three customer segments: Consumer, Corporate, and Home Office. Among them, the Consumer segment contributes the highest share of total revenue, followed by Corporate     and Home Office.
++ Performance also varies by age group. **Mid-career professionals (ages 31–40) demonstrate the strongest performance outcomes, outperforming both younger employees and older age groups**. Performance declines noticeably among employees aged 50 and above.
 
-   In terms of product preferences, the Consumer segment primarily purchases Furniture, followed by Technology and Office Supplies. In contrast, both Corporate and Home Office customers show a     stronger preference for Technology products, with Office Supplies and Furniture ranking second and third, respectively. This indicates distinct purchasing behaviors across customer segments,    emphasizing the importance of segment-specific product strategies.
++ At the departmental level, the Technology department outperforms both Sales and HR, while Sales and HR exhibit similar performance levels.
 
-2. From a geographic perspective, the West region is the highest revenue-contributing region, followed by East, Central, and South.
++ To understand performance drivers, the analysis examined education, experience, and training. Experience and training participation show a clear positive relationship with performance, while formal education level does not. Interestingly, **employees with no formal qualifications show the highest performance**, followed by bachelor’s and doctoral degree holders, suggesting that practical experience and skill development may outweigh formal education in this context.
 
-   At the state level, California leads sales in the West, followed by Washington and Arizona. In the East, New York is the top-performing state, followed by Pennsylvania and Ohio. Texas           dominates the Central region, with Illinois and Michigan as the next highest contributors, while North Carolina leads in the South, followed by Georgia and Virginia.
 
-   Across all regions, each product category generates a reasonable share of revenue, although their relative performance varies slightly by region. This highlights the importance of regional-     level analysis rather than relying solely on global performance trends.
+### Satisfaction Insights: ###
 
-3. Analysis of shipping preferences shows that Standard Class is the most commonly used shipping mode, accounting for approximately 60% of all shipments. This is followed by Second Class (around 20%), First Class (around 15%), and Same Day Delivery (approximately 5%).
+![Dashboard 04 - Employee Satisfaction Analysis](Images/Dashboard_04_Satisfaction_Analysis.jpg)
 
-   The dominance of Standard Class suggests that most customers prioritize cost efficiency over delivery speed, while faster shipping options are used selectively for time-sensitive orders. 
+This is the Employee Satisfaction insights dashboard. It highlights Key KPIs like Overall Employee Satisfaction, Avg. Job Satisfaction, Avg. Work-Life Balance, and Avg. Work-Environment Satisfaction. It also depicts some key Visuals like Satisfaction Trends over time, Satisfaction by Gender, Age Group, Department etc. Key Insights are described below: 
+
++ Employee satisfaction has fluctuated over time, but the overall trend shows improvement in recent years, indicating positive momentum in employee engagement.
+
++ Satisfaction varies across age groups, with older employees (50+) reporting higher satisfaction levels compared to younger and mid-career employees. This may reflect greater job stability or adjusted expectations over time.
+
++ Gender-based satisfaction differences are relatively small. However, female employees report slightly higher satisfaction levels than male employees, aligning with observed performance patterns.
 
 
 ## Dashboard Overview: One Level Details / Deeper Insights ##
 
-Each Dashboard can also be drill-down by a specific year or region to see a particular year or geographic details. Results vary significantly compared to the overall dataset, allowing deeper exploration of temporal and regional analysis. 
+Each Dashboard can also be drill-down by a specific Year or Department or Job Role to see a particular details. Results can vary significantly compared to the overall dataset, allowing deeper exploration of temporal and local analysis. We also have relevant additional analysis which you can drill-through from Dashboard, for example, you can drill-through to "Performance Drivers" Page from "Performance Dashboard". In addition to Drill-Through, there are also some additional pages where we performed deeper analysis. For instance, Attrition Rate per Satisfaction-Performance Quadrant per Job Role, Attrition Risk Index for Department or Job Role etc. To see the full details, we recommend to download the complete Dashboard (.pbix file).
 
-To see the full details, we recommend to download the complete Dashboard (Power BI file). 
+![](Images/Satisfaction_Performance_Quadrant.jpg)
 
 ## Conclusion ##
 
