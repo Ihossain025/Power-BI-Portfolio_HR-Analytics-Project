@@ -241,3 +241,10 @@ Rather than chasing complexity for its own sake, the project shows that most ana
 + **Assumptions are explicitly stated and consistently applied:** Clear assumptions around population scope, time relevance, and evaluation criteria ensure transparency and analytical integrity.
 
 Overall, this project improved both my technical Power BI skills and my ability to think from a business perspective. It reflects my ability to design, build, and deliver BI solutions that not only visualize data but also provide meaningful insights for strategic planning.
+
+
+## Note ##
+
+This project demonstrates my ability to translate business questions into analytical logic, design and manage a scalable data model, and write context-aware DAX measures that produce reliable results. I focused on correctness, clarity, and maintainability—reflecting real-world BI practices.
+
+Beyond technical skills, the project highlights my capability to validate outputs, interpret patterns critically, and communicate insights in clear business language. The end-to-end approach—from modeling to insight storytelling—shows readiness for production-level BI work rather than purely academic analysis.
