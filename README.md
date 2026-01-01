@@ -82,7 +82,33 @@ This project demonstrates the end-to-end Power BI workflow, covering data prepar
 
 ![Data Model](/Images/Data%20Model.jpg)
 
-This is the model view of our dashboard. As you can see in the model, we have total 6 tables in the model: Customer table, Product table, Sales table, Order date table, Ship date table, and All Measure Table. However, In the original dataset, we had just one flat "Superstore sales Table". We have created separate "Customer Table" and "Product Table" to normalize the data. In addition, we have also created separate "Ship Date" and "Order Date" Table to avoid confusion or mismatch during Time Series Analysis. Then, we have built a Star Schema where all dimension tables relate to Fact Table (Sales Table) via 1-to-Many relationship, filter directing from dimension to fact table. "_All Measure" is a separate table which we have created to store our all measures in one place.   
+The data model for this HR Analytics project was designed using Power BI best practices, focusing on clarity, correctness, and maintainability. A star-schema–oriented structure was implemented to ensure predictable filter behavior, good performance, and minimal DAX complexity.
+
+The model is centered around a FactPerformanceRating table containing employee performance review data, supported by several dimension tables, most notably Fact_Employee (act as _Dim Table also) and Dim_Date.
+
+*Key modeling decisions and activities include:*
+
+-A clear distinction was maintained between all employees and reviewed employees to avoid biased attrition calculations, as not all employees were considered for performance review. Employee-centric KPIs or Visual's (Total Employees, Active Employees, Attrition Count) were calculated from Fact_Employee, where Employee-Performance or Satisfaction related KPIs or Visual's (Reviewed Employee, Attrition  Rate [Reviewed]) were calculated from Fact_PerformanceRating Table.
+
+-A single Date dimension was used to support both Hire Date and Performance Review Date, enabling consistent time-based analysis.
+
+-Mixed regional date formats (EU and US) were standardized during Power Query (M) data preparation using locale-aware transformations.
+
+-Relationships were designed as one-to-many and single-directional (dimension → fact) to preserve model stability and avoid ambiguous filter propagation.
+
+- Role-playing dimension tables were intentionally implemented for satisfaction and rating attributes:
+
+    -The original Satisfaction Level dimension was duplicated into separate dimension tables for Job
+     Satisfaction, Work-Life Balance, Work Environment Satisfaction, and Relationship Satisfaction.
+
+    -Similarly, the Rating Level dimension was duplicated to support Manager Rating and Self Rating
+     independently.
+
+This approach avoided reliance on inactive relationships and repeated use of USERELATIONSHIP() or other complex DAX patterns.
+
+-Lookup dimensions (Satisfaction Level, Rating Level, Education Level) were used for semantic clarity and clean slicing, rather than forcing complex filtering logic in measures.
+
+Overall, the model follows a “model-first, simple DAX” philosophy, reflecting real-world BI practices where strong data modeling significantly reduces the need for complex calculations while improving reliability and explainability.  
 
 
 ## Dashboard Overview: Executive Summary / Key Insights ##
