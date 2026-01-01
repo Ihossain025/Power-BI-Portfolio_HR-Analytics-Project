@@ -91,25 +91,25 @@ The model is centered around a FactPerformanceRating table containing employee p
 
 *Key modeling decisions and activities include:*
 
--A clear distinction was maintained between all employees and reviewed employees to avoid biased attrition calculations, as not all employees were considered for performance review. Employee-centric KPIs or Visual's (Total Employees, Active Employees, Attrition Count) were calculated from Fact_Employee, where Employee-Performance or Satisfaction related KPIs or Visual's (Reviewed Employee, Attrition  Rate [Reviewed]) were calculated from Fact_PerformanceRating Table.
++ A clear distinction was maintained between all employees and reviewed employees to avoid biased attrition calculations, as not all employees were considered for performance review. Employee-centric KPIs or Visual's (Total Employees, Active Employees, Attrition Count) were calculated from Fact_Employee, where Employee-Performance or Satisfaction related KPIs or Visual's (Reviewed Employee, Attrition  Rate [Reviewed]) were calculated from Fact_PerformanceRating Table.
 
--A single Date dimension was used to support both Hire Date and Performance Review Date, enabling consistent time-based analysis.
++ A single Date dimension was used to support both Hire Date and Performance Review Date, enabling consistent time-based analysis.
 
--Mixed regional date formats (EU and US) were standardized during Power Query (M) data preparation using locale-aware transformations.
++ Mixed regional date formats (EU and US) were standardized during Power Query (M) data preparation using locale-aware transformations.
 
--Relationships were designed as one-to-many and single-directional (dimension → fact) to preserve model stability and avoid ambiguous filter propagation.
++ Relationships were designed as one-to-many and single-directional (dimension → fact) to preserve model stability and avoid ambiguous filter propagation.
 
-- Role-playing dimension tables were intentionally implemented for satisfaction and rating attributes:
++ Role-playing dimension tables were intentionally implemented for satisfaction and rating attributes:
 
-    -The original Satisfaction Level dimension was duplicated into separate dimension tables for Job
+    + The original Satisfaction Level dimension was duplicated into separate dimension tables for Job
      Satisfaction, Work-Life Balance, Work Environment Satisfaction, and Relationship Satisfaction.
 
-    -Similarly, the Rating Level dimension was duplicated to support Manager Rating and Self Rating
+    +Similarly, the Rating Level dimension was duplicated to support Manager Rating and Self Rating
      independently.
 
 This approach avoided reliance on inactive relationships and repeated use of USERELATIONSHIP() or other complex DAX patterns.
 
--Lookup dimensions (Satisfaction Level, Rating Level, Education Level) were used for semantic clarity and clean slicing, rather than forcing complex filtering logic in measures.
++ Lookup dimensions (Satisfaction Level, Rating Level, Education Level) were used for semantic clarity and clean slicing, rather than forcing complex filtering logic in measures.
 
 Overall, the model follows a “model-first, simple DAX” philosophy, reflecting real-world BI practices where strong data modeling significantly reduces the need for complex calculations while improving reliability and explainability.  
 
