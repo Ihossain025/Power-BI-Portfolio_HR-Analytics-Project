@@ -165,7 +165,7 @@ This is our demographics insights dashboard. It highlights key KPIs like Total E
 
 This is our attrition analysis dashboard. It highlights KPIs like Total Employee, Attrition Count, Attrion Rate (P), Attrition Rate (S). Here P means Population and S means Sample. It also shows some important visuals like Attrition over time, Attrition by Department, Job Role, and Employee Satisfaction-Performance Quadrant. We have also deep dive for Attrition - Who is leaving? Why are they leaving?  Does Satisfaction or Performance has influence on Attrition. The following image shows that deep-dive analysis. 
 
-![Attrition Analysis - Deep Dive](Images/Attrition_Analysis_Deep _Dive.jpg)
+![Attrition Analysis - Deep Dive](Images/Attrition_Analysis_Deep_Dive.jpg)
 
 The Dashboard and Deep-Dive Analysis shows following Insights: 
 
@@ -186,7 +186,7 @@ The Dashboard and Deep-Dive Analysis shows following Insights:
    
 ### Performance Insights: ###
 
-!Dashboard 03 - Employee Performance Insights](Images/Dashboard_03_Performance_Analysis.jpg)
+![Dashboard 03 - Employee Performance Insights](Images/Dashboard_03_Performance_Analysis.jpg)
 
 This is the Employee Performance insights dashboard. It highlights Key KPIs like No. of Reviewed Employees, Avg. Manager-Rating, Avg. Self-Rating, and Overall Performance. It also depicts some key Visuals like Performance Trends, Performance by Gender, Age Group, Department etc. Key Insights are described below: 
 
@@ -222,26 +222,22 @@ Each Dashboard can also be drill-down by a specific Year or Department or Job Ro
 
 ## Conclusion ##
 
-The Superstore Sales Data Analytics project demonstrates how raw sales data can be transformed into actionable business insights using Power BI. Through structured data preparation, modeling, DAX calculations, and interactive visualization, the dashboard provides a 360° view of sales, products, and consumer behavior.
+This HR Analytics project demonstrates how well-structured data modeling and clear analytical framing can answer complex people-related questions without relying on overly complex calculations. By prioritizing business questions first, designing a clean star-schema–based model, and leveraging context-aware measures, the analysis delivers insights that are both reliable and decision-ready.
 
-**Key Insights Delivered:**
+Rather than chasing complexity for its own sake, the project shows that most analytical value comes from correct grain definition, filter propagation control, and role-aware dimensions. This approach mirrors real-world BI environments, where maintainability, clarity, and performance matter as much as analytical depth. The resulting dashboard enables stakeholders to understand who is leaving, why they are leaving, and where intervention would have the highest impact.
 
-- 📈 Identified overall and year-specific sales & profit growth trends.
+### Key Takeaways from this project ###
 
-- 🛍️ Highlighted best- and worst-performing products, product categories, and sub-categories across regions and time-frames.
++ **Data modeling drives analytics, not DAX complexity:** By investing time in relationship design, role-playing dimensions, and proper filter flow, most insights were achieved using simple, readable measures, reflecting real-world BI best practices.
 
-- 👥 Analyzed customer segments and geographic markets contributing most to revenue.
++ **Business logic must be embedded in the model, not the visuals:** Concepts such as latest review only, reviewed vs all employees, and attrition definitions were handled at the model/measure level to ensure consistency across all visuals.
 
-- 🎛️ Delivered an interactive, user-friendly dashboard that supports data-driven decision-making for business development and sales strategy.
++ **Intentional duplication of dimension tables can reduce analytical risk:** Separate role-playing dimensions (e.g., Satisfaction Level and Rating Level) were deliberately created to avoid inactive relationships and complex DAX, improving clarity, scalability, and correctness.
 
-**Key Takeaways from this project**
++ **Correlation is framed visually, not statistically, for decision-makers:** The analysis focuses on pattern recognition and comparative trends, which is more aligned with executive BI usage than academic statistical modeling.
 
-- I understood the importance of proper data modeling (Star Schema) to ensure accurate and efficient analysis.
++ **A senior BI mindset prioritizes explainability over cleverness:** Every metric and visual in the report can be explained in plain business language, ensuring trust, adoption, and long-term usability.
 
-- I practiced writing DAX measures for KPIs such as profit margin, sales growth, and customer segmentation, which deepened my understanding of DAX functions.
-
-- I learned how much value interactive features (slicers, drill-downs, tooltips, navigation) bring to a dashboard, making it easier for users to explore insights on their own.
-
-- Most importantly, I realized that data visualization is not just about charts—it’s about telling a story that supports business planning.
++ **Assumptions are explicitly stated and consistently applied:** Clear assumptions around population scope, time relevance, and evaluation criteria ensure transparency and analytical integrity.
 
 Overall, this project improved both my technical Power BI skills and my ability to think from a business perspective. It reflects my ability to design, build, and deliver BI solutions that not only visualize data but also provide meaningful insights for strategic planning.
