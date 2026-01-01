@@ -35,7 +35,7 @@ This project demonstrates the end-to-end Power BI workflow, covering data prepar
 - 🔑 Created duplicate dimension table to build proper data model (explained in the model overview Section). Removed duplicates from dimension tables to maintain integrity.
 
 
-![](Images/Data_Cleaning_Employee_Table.jpg)
+![Data Transformation - Employee Table](Images/Data_Cleaning_Employee_Table.jpg)
   
 
 ### 🗂️ Data Modeling ###
@@ -56,7 +56,9 @@ This project demonstrates the end-to-end Power BI workflow, covering data prepar
 
 - ⏳ Enabled time intelligence with CALENDAR, YEAR, MONTH, DAY, FORMAT etc.
 
-  ![DAX Measure - Overall Employee Satisfaction](Images/DAX_Measure_Overall_Employee_Satisfaction.jpg)
+
+  ![DAX Measure Example - Overall Employee Satisfaction](Images/DAX_Measure_Overall_Employee_Satisfaction.jpg)
+
 
 ### 📈 Data Visualization ###
 
@@ -79,7 +81,8 @@ This project demonstrates the end-to-end Power BI workflow, covering data prepar
 
 ## Data Structure / Model Overview ##
 
-![](Images/Data_Model.jpg)
+
+![Data Model View](Images/Data_Model.jpg)
 
 
 The data model for this HR Analytics project was designed using Power BI best practices, focusing on clarity, correctness, and maintainability. A star-schema–oriented structure was implemented to ensure predictable filter behavior, good performance, and minimal DAX complexity.
