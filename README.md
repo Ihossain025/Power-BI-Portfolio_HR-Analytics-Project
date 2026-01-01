@@ -32,11 +32,13 @@ This project demonstrates the end-to-end Power BI workflow, covering data prepar
 
 - 🧹 Cleaned and transformed data: removed unnecessary columns, handled blanks/errors, replace abbreviations, created custom columns, ensured correct data types etc.
 
-- 🔑 Created duplicate dimension table to build proper data model (explained in the model overview Section). Removed duplicates from dimension tables to maintain integrity.
+- 🔑 Created duplicate dimension table to build proper data model. Removed duplicates from dimension tables to maintain integrity.
 
 
 ![Data Transformation - Employee Table](Images/Data_Cleaning_Employee_Table.jpg)
   
+* Fig. 01: Data Transformation - Employee Table *
+
 
 ### 🗂️ Data Modeling ###
 
@@ -59,7 +61,7 @@ This project demonstrates the end-to-end Power BI workflow, covering data prepar
 
   ![DAX Measure Example - Overall Employee Satisfaction](Images/DAX_Measure_Overall_Employee_Satisfaction.jpg)
 
-
+* Fig. 02: DAX Measure Example - Overall Employee Satisfaction *
 ### 📈 Data Visualization ###
 
 - 📉 Line Charts → To show Attrition, Performance, and Satisfaction Trends over time (Year-over-Year, Month-over-Month, Quater-over-Quater).
