@@ -20,6 +20,7 @@ Using Power BI, this project analyzes key HR datasets covering employee profiles
 
 This project demonstrates how business intelligence (BI) tools can be applied to HR data to improve organizational effectiveness and align people strategies with business goals.
 
+
 ## 🛠️ Skills Demonstrated ##
 
 This project demonstrates the end-to-end Power BI workflow, covering data preparation, modeling, analysis, and dashboarding.
@@ -71,6 +72,7 @@ This project demonstrates the end-to-end Power BI workflow, covering data prepar
 
   We have also demonstrated other important visuals like Map Chart, Treemap, Matrix, Table etc. However, we try to use common charts most so that different   stakeholders or non-technical people can easily understand the essence. 
 
+
 ### 🎛️ Interactive Dashboard ###
 
 + 🎛️ Added slicers, drill-downs, drill-through, tooltips, and navigation buttons for interactivity.
@@ -89,8 +91,6 @@ The data model for this HR Analytics project was designed using Power BI best pr
 The model is centered around a FactPerformanceRating table containing employee performance review data, supported by several dimension tables, most notably Fact_Employee (act as _Dim Table also) and Dim_Date.
 
 *Key modeling decisions and activities include:*
-
-+ A clear distinction was maintained between all employees and reviewed employees to avoid biased attrition calculations, as not all employees were considered for performance review. Employee-centric KPIs or Visual's (Total Employees, Active Employees, Attrition Count) were calculated from Fact_Employee, where Employee-Performance or Satisfaction related KPIs or Visual's (Reviewed Employee, Attrition  Rate [Reviewed]) were calculated from Fact_PerformanceRating Table.
 
 + A single Date dimension table was used to support both Hire Date and Performance Review Date, enabling consistent time-based analysis.
 
@@ -117,19 +117,31 @@ Overall, the model follows a “model-first, simple DAX” philosophy, reflectin
 
 The analysis in this project follows a business-driven, assumption-aware approach, ensuring that insights are both analytically correct and practically interpretable.
 
-### Analytical Approach ###
-
 + Analysis was structured around clear business questions, such as:
   
     + **Demographics Analysis:** Who are our employees? How is the composition of our workforce?
       
     + **Attrition Analysis:** What is our overall attrition rate? Who are leaving? Why are they leaving? Which Departments/Job Role has high Attrition Risks?
 
-    + **Performance Analysis:** How is the overall performance of our employees? Is it improving or declining over time? Who are performing well? What are the Performance drivers? Does Training / Experience / Education improves employee performance?
+    + **Performance Analysis:** How is the performance of our employees? Is it improving or declining over time? Who are performing well? What are the Performance drivers?
       
-    + **Satisfaction Analysis:** How satisfied are our employees? Is it improving or declining over time? Who are satisfied and who are not?
+    + **Satisfaction Analysis:** How satisfied are our employees? Is Satisfaction improving or declining over time? Who are satisfied and who are not?
  
-    + **Attrition vs Performance or Satisfaction:** Which satisfaction factor correlates most with attrition? Do dissatisfied employees leave more often? Is attrition linked to employee performance? Do employees with fewer promotions leave more?
+    + **Attrition vs Performance or Satisfaction:** Do dissatisfied employees leave more often? Is attrition linked to employee performance?
+
++ A clear distinction was maintained between all employees and reviewed employees to avoid biased calculations, as not all employees were considered for performance review. Employee-centric KPIs or Visual's (Total Employees, Active Employees) were calculated from Dim_Employee, where Employee-Performance or Employee-Satisfaction related KPIs or Visual's (Reviewed Employee) were calculated from Fact_PerformanceRating Table.
+
++ For Satisfaction, we had four factors in our data: Job Satisfaction, Work-Life Balance, Work-Environment Satisfaction, Work-Relationship Satisfaction. Each factor has rated by scale between 1-5. We have taken the weighted average for computing "Overall Employee Satisfaction" where we have given highest weight to Job Satisfaction (0.4), followed by Work-Life Balance (0.25), Work-Environment Satisfaction (0.20), and Work-Relationship Satisfaction (0.15).
+
++ For Performance, we had two factors in our data: Manager-Rating & Self-Rating. Each factor has rated by scale between 1-5. We have taken the weighted average for computing "Overall Employee Performance" where we have given highest weight to Manager Rating (0.6), followed by Self-Rating (0.40).
+
++ Satisfaction factors were analyzed individually against attrition, compared using consistent visuals and scales. The result was interpreted through trend consistency, not composite scoring. Composite satisfaction indices were explored but excluded due to over-engineering.
+
++ Summary insights were prioritized over exhaustive visuals. A high-level summary dashboard was created, Supporting analyses were moved to detail pages or tooltips.
+
++ Results were validated by comparing trends across multiple satisfaction dimensions, checking consistency between employee-level KPIs and filtered subsets, and ensuring logical alignment (e.g., lower satisfaction aligning with higher attrition).
+
++ Visual correlation is sufficient for Business Intelligence use cases. No statistical correlation or predictive modeling was assumed or required for this project.
 
 
 ## Dashboard Overview: Executive Summary / Key Insights ##
