@@ -80,7 +80,7 @@ This project demonstrates the end-to-end Power BI workflow, covering data prepar
 ## Data Structure / Model Overview ##
 
 
-![Data Model](Images/Data_Model.jpg)
+![Data Model](Images/Data _Model.jpg)
 
 The data model for this HR Analytics project was designed using Power BI best practices, focusing on clarity, correctness, and maintainability. A star-schema–oriented structure was implemented to ensure predictable filter behavior, good performance, and minimal DAX complexity.
 
