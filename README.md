@@ -153,11 +153,11 @@ The analysis in this project follows a business-driven, assumption-aware approac
 
 This is our demographics insights dashboard. It highlights key KPIs like Total Employee, Active Employee, and Average Tenure. This also show several important visuals like Employee by Department, Job Role, Gender, Age Group etc. The Dashboard shows following insights: 
 
-+ The organization’s workforce is primarily concentrated in Technology, followed by Sales and Human Resources, indicating a strong technical and commercial orientation. At the job-role level, Sales Executives represent the largest employee group, followed by software and data-related roles such as Software Engineers, Data Scientists, and Machine Learning Engineers.
++ The **organization’s workforce is primarily concentrated in Technology, followed by Sales and Human Resources, indicating a strong technical and commercial orientation**. At the job-role level, Sales Executives represent the largest employee group, followed by software and data-related roles such as Software Engineers, Data Scientists, and Machine Learning Engineers.
 
-+ Gender representation across the organization is relatively balanced, with male and female employees accounting for comparable proportions of the workforce. Additionally, a meaningful share of employees identify as non-binary, while a small percentage chose not to disclose their gender, reflecting a diverse workforce composition.
++ **Gender representation across the organization is relatively balanced**, with male and female employees accounting for comparable proportions of the workforce. Additionally, a meaningful share of employees identify as non-binary, while a small percentage chose not to disclose their gender, reflecting a diverse workforce composition.
 
-+ From an age perspective, the workforce skews young. Nearly two-thirds of employees are under the age of 30, while mid-career professionals (ages 31–40) and senior professionals (ages 41–50) make up a smaller share. This age distribution has important implications for retention, performance, and satisfaction trends observed later in the analysis.
++ From an age perspective, the workforce skews young. **Nearly two-thirds of employees are under the age of 30**, while mid-career professionals (ages 31–40) and senior professionals (ages 41–50) make up a smaller share. This age distribution has important implications for retention, performance, and satisfaction trends observed later in the analysis.
 
 ### Attrition Insights: ###
 
@@ -169,19 +169,19 @@ This is our attrition analysis dashboard. It highlights KPIs like Total Employee
 
 The Dashboard and Deep-Dive Analysis shows following Insights: 
 
-+ Attrition is not evenly distributed across departments or roles. Sales exhibits the highest attrition rate, followed by Human Resources and Technology. This departmental pattern is mirrored at the job-role level, where Sales Representatives experience the highest attrition, followed by recruiters and technical roles such as data scientists.
++ Attrition is not evenly distributed across departments or roles. **Sales exhibits the highest attrition rate, followed by Human Resources and Technology**. This departmental pattern is mirrored at the job-role level, where Sales Representatives experience the highest attrition, followed by recruiters and technical roles such as data scientists.
 
-+ While Sales has the highest absolute attrition, attrition risk relative to department size is highest in HR, followed by Technology and Sales. This suggests that smaller departments may face proportionally greater retention challenges.
++ **While Sales has the highest absolute attrition, attrition risk relative to department size is highest in HR**, followed by Technology and Sales. This suggests that smaller departments may face proportionally greater retention challenges.
 
-+ Attrition trends over time show significant year-to-year volatility, with no consistent upward or downward pattern. This indicates that attrition is likely driven by multiple structural and behavioral factors rather than a single long-term trend.
++ **Attrition trends over time show significant year-to-year volatility, with no consistent upward or downward pattern**. This indicates that attrition is likely driven by multiple structural and behavioral factors rather than a single long-term trend.
 
-+ Demographically, younger employees (under 30) and employees with shorter tenure (0–1 years and 2–5 years) are significantly more likely to leave the organization, highlighting early-career retention as a key challenge.
++ Demographically, **younger employees (under 30) and employees with shorter tenure (0–1 years and 2–5 years) are significantly more likely to leave the organization**, highlighting early-career retention as a key challenge.
 
-+ Performance and satisfaction play a critical role in attrition behavior. Employees at both performance extremes—those rated “Above and Beyond” as well as those “Needing Improvement”—exhibit higher attrition. From a satisfaction standpoint, very dissatisfied employees are the most likely to leave.
++ Performance and satisfaction play a critical role in attrition behavior. **Employees at both performance extremes—those rated “Above and Beyond” as well as those “Needing Improvement”—exhibit higher attrition**. **From a satisfaction standpoint, very dissatisfied employees are the most likely to leave**.
 
-+ When performance and satisfaction are analyzed together, the highest attrition occurs among employees with low satisfaction and low performance, followed by high satisfaction–low performance and low satisfaction–high performance groups. Employees with high satisfaction and high performance show the lowest attrition, reinforcing the combined importance of engagement and effectiveness.
++ **When performance and satisfaction are analyzed together, the highest attrition occurs among employees with low satisfaction and low performance, followed by high satisfaction–low performance and low satisfaction–high performance groups**. Employees with high satisfaction and high performance show the lowest attrition, reinforcing the combined importance of engagement and effectiveness.
 
-+ Additionally, operational factors such as overtime, frequent business travel, and lower salary levels show a strong association with higher attrition, suggesting that workload intensity and compensation competitiveness are key retention drivers.
++ Additionally, **operational factors such as overtime, frequent business travel, and lower salary levels show a strong association with higher attrition**, suggesting that workload intensity and compensation competitiveness are key retention drivers.
 
    
 ### Performance Insights: ###
@@ -209,9 +209,9 @@ This is the Employee Satisfaction insights dashboard. It highlights Key KPIs lik
 
 + Employee satisfaction has fluctuated over time, but the overall trend shows improvement in recent years, indicating positive momentum in employee engagement.
 
-+ Satisfaction varies across age groups, with older employees (50+) reporting higher satisfaction levels compared to younger and mid-career employees. This may reflect greater job stability or adjusted expectations over time.
++ Satisfaction varies across age groups, with **older employees (50+) reporting higher satisfaction levels compared to younger and mid-career employees**. This may reflect greater job stability or adjusted expectations over time.
 
-+ Gender-based satisfaction differences are relatively small. However, female employees report slightly higher satisfaction levels than male employees, aligning with observed performance patterns.
++ Gender-based satisfaction differences are relatively small. However, **female employees report slightly higher satisfaction levels than male employees**, aligning with observed performance patterns.
 
 
 ## Dashboard Overview: One Level Details / Deeper Insights ##
