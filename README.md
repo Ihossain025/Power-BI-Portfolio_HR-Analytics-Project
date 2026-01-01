@@ -243,7 +243,7 @@ Rather than chasing complexity for its own sake, the project shows that most ana
 Overall, this project improved both my technical Power BI skills and my ability to think from a business perspective. It reflects my ability to design, build, and deliver BI solutions that not only visualize data but also provide meaningful insights for strategic planning.
 
 
-## Note ##
+## Personal Note ##
 
 This project demonstrates my ability to translate business questions into analytical logic, design and manage a scalable data model, and write context-aware DAX measures that produce reliable results. I focused on correctness, clarity, and maintainability—reflecting real-world BI practices.
 
