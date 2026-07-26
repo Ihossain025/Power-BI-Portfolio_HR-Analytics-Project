@@ -20,6 +20,7 @@ Using Power BI, this project analyzes key HR datasets covering employee profiles
 
 This project demonstrates how business intelligence (BI) tools can be applied to HR data to improve organizational effectiveness and align people strategies with business goals.
 
+---
 
 ## 🛠️ Skills Demonstrated ##
 
@@ -80,6 +81,7 @@ This project demonstrates the end-to-end Power BI workflow, covering data prepar
 
 + 🎨 Delivered a business-friendly, interactive dashboard that supports strategic decision-making.
 
+---
 
 ## Data Structure / Model Overview ##
 
@@ -113,6 +115,7 @@ The model is centered around a FactPerformanceRating table containing employee p
 
 Overall, the model follows a “model-first, simple DAX” philosophy, reflecting real-world BI practices where strong data modeling significantly reduces the need for complex calculations while improving reliability and explainability.  
 
+---
 
 ## Analytical Approach & Assumption ##
 
@@ -144,6 +147,7 @@ The analysis in this project follows a business-driven, assumption-aware approac
 
 + Visual correlation is sufficient for Business Intelligence use cases. No statistical correlation or predictive modeling was assumed or required for this project.
 
+---
 
 ## Dashboard Overview: Key Insights ##
 
@@ -213,12 +217,15 @@ This is the Employee Satisfaction insights dashboard. It highlights Key KPIs lik
 
 + Gender-based satisfaction differences are relatively small. However, **female employees report slightly higher satisfaction levels than male employees**, aligning with observed performance patterns.
 
+---
 
 ## Dashboard Overview: One Level Details / Deeper Insights ##
 
 Each Dashboard can also be drill-down by a specific Year or Department or Job Role to see a particular details. Results can vary significantly compared to the overall dataset, allowing deeper exploration of temporal and local analysis. We also have relevant additional analysis which you can drill-through from Dashboard, for example, you can drill-through to "Performance Drivers" Page from "Performance Dashboard". In addition to Drill-Through, there are also some additional pages where we performed deeper analysis. For instance, Attrition Rate per Satisfaction-Performance Quadrant per Job Role, Attrition Risk Index for Department or Job Role etc. To see the full details, we recommend to download the complete Dashboard (.pbix file).
 
 ![](Images/Satisfaction_Performance_Quadrant.jpg)
+
+---
 
 ## Conclusion ##
 
@@ -242,9 +249,18 @@ Rather than chasing complexity for its own sake, the project shows that most ana
 
 Overall, this project improved both my technical Power BI skills and my ability to think from a business perspective. It reflects my ability to design, build, and deliver BI solutions that not only visualize data but also provide meaningful insights for strategic planning.
 
+---
 
 ## Personal Note ##
 
 This project demonstrates my ability to translate business questions into analytical logic, design and manage a scalable data model, and write context-aware DAX measures that produce reliable results. I focused on correctness, clarity, and maintainability—reflecting real-world BI practices.
 
 Beyond technical skills, the project highlights my capability to validate outputs, interpret patterns critically, and communicate insights in clear business language. The end-to-end approach—from modeling to insight storytelling—shows readiness for production-level BI work rather than purely academic analysis.
+
+---
+
+## 👤 Author
+
+**Md. Iqbal Hossain**
+
+Business & Data Analyst | Data Engineer | BI Analyst | Technical Consultant
