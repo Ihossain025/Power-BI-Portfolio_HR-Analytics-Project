@@ -36,43 +36,35 @@ This project demonstrates the end-to-end Power BI workflow, covering data prepar
 + 🔑 Created duplicate dimension table to build proper data model. Removed duplicates from dimension tables to maintain integrity.
 
 
-![Data Transformation - Employee Table](Images/Data_Cleaning_Employee_Table.jpg)
-  
-
 ### 🗂️ Data Modeling ###
 
 + 📅 Built separate Date Tables (Dim_Date) for accurate time-based analysis (Year-over-Year, Qtr-Over-Qtr, Month-over-Month).
 
-+ ⭐ Designed a Star-Oriented Fact Constellation Schema with multiple fact tables (Fact_Employee & Fact_Performance Rating) and dimension tables (Dim_Date Table, Dim_Manager_Rating Table, Dim_Self_Rating Table, etc.).
++ ⭐ The model primarily follows a star-schema architecture, with Fact_PerformanceRating at the center and denormalized dimensions connected directly to the fact table. A snowflake element is intentionally introduced through DimDate → DimEmployee to support time-based analysis of employee demographics and attrition based on employee hire date.
 
 + 🔗 Established 1-to-many and one-way filter propagation relationships for consistent and correct insights.
 
 
 ### 📊 Data Analysis (DAX) ###
 
-+ ➕ Created calculated columns and measures: By applying DAX Formulas and Functions, we have computed core metrics like Total Employees, Reviewed Employees, Attrition Count, Attrition Rate (Population), Attrition Rate (Sample), Attrition Risk, Overall Employee Satisfaction, Overall Employee Performance, Average Salary, Average Tenure etc.
++ ➕ Created calculated columns and measures: By applying DAX Formulas and Functions, we have computed core metrics like Total Employees, Reviewed Employees, Attrition Count, Attrition Rate (Population), Attrition Rate (Sample), Attrition Risk, Overall Employee Satisfaction, Overall Employee Performance, Average Salary, Average Tenure, etc.
 
-+ 🧮 Applied functions like CALCULATE, AVERAGE, AVERAGEX, DIVIDE, DISTINCTCOUNT, SELECTEDVALUE, SWITCH, MINX, MAXX, UNION, SELECTCOLUMNS, ADDCOLUMNS etc.
-  We have also used variables to store the temporary results of a calculation so that we can reduce the no. of measure. 
++ 🧮 Applied DAX Functions like CALCULATE, AVERAGE, AVERAGEX, DIVIDE, DISTINCTCOUNT, SELECTEDVALUE, SWITCH, MINX, MAXX, UNION, SELECTCOLUMNS, ADDCOLUMNS, etc. 
 
-+ ⏳ Enabled time intelligence with CALENDAR, YEAR, MONTH, DAY, FORMAT etc.
-
-
-  ![DAX Measure Example - Overall Employee Satisfaction](Images/DAX_Measure_Overall_Employee_Satisfaction.jpg)
++ ⏳ Enabled time intelligence with CALENDAR, YEAR, MONTH, DAY, FORMAT, etc.
 
 
 ### 📈 Data Visualization ###
 
-+ 📉 Line Charts → To show Attrition, Performance, and Satisfaction Trends over time (Year-over-Year, Month-over-Month, Quater-over-Quater).
++ 📉 Line Charts → To show Attrition, Performance, and Satisfaction Trends over time (Year-over-Year, Month-over-Month, Quarter-over-Quarter).
 
-+ 🗂️ Cards → To demonstrate Key KPIs (Total Employee's, Reviewed Employee's, Attrition Count, Attrition Rate, Overall Employee Satisfaction, Overall Employee Performance etc.).
++ 🗂️ Cards → To demonstrate Key KPIs (Total Employees, Reviewed Employees, Attrition Count, Attrition Rate, Overall Employee Satisfaction, Overall Employee Performance, etc.).
 
-+ 📊 Bar/Column/Cluster Column/Stacked Bar Charts → To compare Attrition, Performance, Satisfaction by Department, Job Role, Gender, Age Group etc.
++ 📊 Bar/Column/Cluster Column/Stacked Bar Charts → To compare Attrition, Performance, Satisfaction by Department, Job Role, Gender, Age Group, etc.
 
-+ 🥧 Pie Chart → To exhibit part-to-whole composition. For Example, Employee by Gender, Age Group, Ethnicity etc.
++ 🥧 Pie Chart → To exhibit part-to-whole composition. For Example, Employees by Gender, Age Group, Ethnicity etc.
 
-     We have also demonstrated other important visuals like Map Chart, Treemap, Matrix, Table etc. However, we try to use common charts most so that
-     different   stakeholders or non-technical people can easily understand the essence. 
+We have also demonstrated other important visuals like Map Chart, Treemap, Matrix, Table, etc. However, we tried to use common charts mostly so that different stakeholders or non-technical people can easily understand the insights. 
 
 
 ### 🎛️ Interactive Dashboard ###
@@ -89,7 +81,7 @@ This project demonstrates the end-to-end Power BI workflow, covering data prepar
 
 The data model for this HR Analytics project was designed using Power BI best practices, focusing on clarity, correctness, and maintainability. A star-schema–oriented structure was implemented to ensure predictable filter behavior, good performance, and minimal DAX complexity.
 
-The model is centered around a FactPerformanceRating table containing employee performance review data, supported by several dimension tables, most notably Fact_Employee (act as _Dim Table also) and Dim_Date.
+The model is centered around a FactPerformanceRating table containing employee performance review data, supported by several dimension tables, most notably Dim_Employee and Dim_Date.
 
 *Key modeling decisions and activities include:*
 
@@ -107,7 +99,7 @@ The model is centered around a FactPerformanceRating table containing employee p
     + Similarly, the Rating Level dimension was duplicated to support Manager Rating and Self Rating
      independently.
 
-     This approach avoided reliance on inactive relationships and repeated use of USERELATIONSHIP() or other complex DAX patterns.
+This approach  was used to provide users greater filtering capability and to avoid reliance on inactive relationships and repeated use of USERELATIONSHIP() or other complex DAX patterns.
 
 + Lookup dimensions (Satisfaction Level, Rating Level, Education Level) were used for semantic clarity and clean slicing, rather than forcing complex filtering logic in measures.
 
